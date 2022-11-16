@@ -53,6 +53,7 @@ export class UserEditPage implements OnInit {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       headers: { 'Content-Type': 'application/json' },
       data: {
+        id: this.id,
         taskText: this.taskText,
         taskDate: this.taskDate,
       },
