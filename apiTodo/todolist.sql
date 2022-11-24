@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2022 at 06:36 PM
+-- Generation Time: Nov 24, 2022 at 01:08 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -24,31 +24,49 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `task`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE `task` (
   `id` int(11) NOT NULL,
   `taskText` varchar(255) NOT NULL,
   `taskDate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `task`
+--
+
+INSERT INTO `task` (`id`, `taskText`, `taskDate`) VALUES
+(7, 'luffy', '2022-11-15'),
+(8, 'dono deska', '2022-11-19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `username` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `taskText`, `taskDate`) VALUES
-(4, 'D', '2022-11-30'),
-(6, 'ff', '2022-11-05');
+INSERT INTO `user` (`username`, `password`) VALUES
+('afif', 'ecc8486f6a1ff3e07c636eb44df95052');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `user`
+-- Indexes for table `task`
 --
-ALTER TABLE `user`
+ALTER TABLE `task`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -56,10 +74,10 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT for table `task`
 --
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+ALTER TABLE `task`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

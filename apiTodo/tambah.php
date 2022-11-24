@@ -10,10 +10,10 @@ $taskDate = trim($data['taskDate']);
 
 
 if ($taskText != '' and $taskDate != '') {
-	$query = mysqli_query($koneksi,"insert into user (taskText,taskDate) values('$taskText','$taskDate')");
+	$query = mysqli_query($koneksi,"insert into task (taskText,taskDate) values('$taskText','$taskDate')");
 
 }else{
-	$query = mysqli_query($koneksi,"delete from user where id='$id'");
+	$query = mysqli_query($koneksi,"delete from task where id='$id'");
 }
 
 

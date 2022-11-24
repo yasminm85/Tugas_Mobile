@@ -1,7 +1,7 @@
 <?php 
 require 'koneksi.php';
 $data = [];
-$query = mysqli_query($koneksi,"select * from user");
+$query = mysqli_query($koneksi,"select * from task");
 while ($row = mysqli_fetch_object($query)) {
 	$data[] = $row;
 }

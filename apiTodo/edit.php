@@ -7,7 +7,7 @@ $taskText = $data['taskText'];
 $taskDate = $data['taskDate'];
 $id = $data['id'];
 
-$query = mysqli_query($koneksi,"update user set taskText='$taskText',taskDate='$taskDate' where id='$id'");
+$query = mysqli_query($koneksi,"update task set taskText='$taskText',taskDate='$taskDate' where id='$id'");
  if ($query) {
  	http_response_code(201);
  	$pesan['status'] = 'sukses';

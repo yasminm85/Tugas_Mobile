@@ -4,7 +4,7 @@ $input = file_get_contents('php://input');
 $pesan =[];
 
 $id = $_GET['id'];
-$query = mysqli_query($koneksi,"delete from user where id='$id'");
+$query = mysqli_query($koneksi,"delete from task where id='$id'");
 if ($query) {
 	http_response_code(201);
 	$pesan['status'] = 'sukses';
